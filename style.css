@@ -1,0 +1,462 @@
+/* Add or modify CSS for your web app */
+html{
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box; /* use traditional box model sizing */
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+ 
+}
+
+
+#camera--view, #camera--sensor, #camera--output{
+  transform: scaleX(-1);
+  filter: FlipH;
+}
+
+
+#camera--sensor{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.row{
+  text-align: center;
+}
+
+/* #notification  */
+#notification {
+  display: none; /* hide until needed */
+  position: fixed; /* fix to viewport */
+  top: 0; /* place at top of viewport */
+  left: 50%;
+  transform: translate(-50%, 10px);
+  max-width: 300px;
+  width: calc(100vw - 20px);
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #fbfbfb;
+  border-radius: 10px;
+  border: 1px solid #bbbbbb;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+/* close button for notification */
+.closebtn {
+  margin: -15px -15px 10px 10px;
+  padding: 10px;
+  color: #888888;
+  font-weight: bold;
+  float: right;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* hover effect for close button */
+.closebtn:hover {
+  color: #000000;
+}
+
+/* .screen class applies to all screens */
+.screen {
+  max-width: 100vw; /* mimic largest phone width */
+  width: 100vw; /* width of viewport */
+  height: 100vh; /* height of viewport minus height of #navigation menu */
+  margin: 0 auto;
+  /*padding: 20px 10px;*/
+  overflow-x: hidden;
+  border: 1px solid #888888;
+  text-align: center;
+  /* can add other CSS for all screens, such as background-color, etc. */
+
+}
+
+.camera--view{
+  height: calc(100vh - 50px); 
+  background-color: rgb(211, 211, 211);
+
+}
+
+.camera--taken{
+  height: calc(100vh - 50px); 
+  background-color: rgb(211, 211, 211);
+}
+
+.camera--edit{
+  /*height: calc(100vh - 120px); */
+  background-color: rgb(211, 211, 211);
+  position: relative;
+  z-index: 0;
+}
+
+.camera--screen{
+  position: relative;
+  z-index: 1;
+}
+
+.images{
+  position: relative;
+  z-index: 3;
+}
+
+.nav--1{
+  height: 50px;
+  position: relative;
+  bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: gainsboro;
+}
+
+.container-fluid.stickers{
+  display: block;
+  width: 100vw;
+  /*overflow: auto;
+  white-space: nowrap;
+  */
+  position: relative;
+  bottom: 0;
+
+}
+
+/* show #screen1 when app first starts */
+#screen1 {
+	display: block;
+}
+
+/* hide other screens when app first starts */
+#screen2, #screen3, #screen4 {
+  display: none;
+  height: auto;
+}
+
+
+/* Horizontal scroll bar with stickers 
+
+.container.testimonial-group{
+  height: 80vh;
+}
+
+
+
+.row.text-center{
+  height: 80vh;
+  vertical-align: bottom;
+}
+*/
+
+
+.text--input{
+  display: none;
+}
+
+.form-control{
+  width: 100vw;
+}
+
+/* can add custom CSS for each specific screen */
+#screen1 {
+
+}
+
+#screen2 {
+
+}
+
+#screen3 {
+
+}
+
+#screen4 {
+
+}
+
+
+#drag-1 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/1.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+
+#drag-2 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/2.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-3 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/3.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-4 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/4.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-5 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/5.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-6 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/6.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-7 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/7.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-8 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/8.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-9 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/9.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-10 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/10.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-11 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/11.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-12 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/12.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-13 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/13.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-14 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/14.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-15 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/15.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-16 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/16.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-17 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/17.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-18 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/18.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-19 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/19.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-20 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/20.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-21 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/21.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-22 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/22.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-23 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/23.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-24 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/24.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
+#drag-25 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("img/25.svg");
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+}
